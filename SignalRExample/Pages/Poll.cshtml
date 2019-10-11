@@ -1,0 +1,42 @@
+﻿@page
+@model SignalRExample.Pages.PollModel
+@{
+    ViewData["Title"] = "Poll";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            Usuario: <input type="text" id="userInput" />
+        </div>
+        <div class="col-6">&nbsp;</div>
+    </div>
+    <div class="row">Encuesta: ¿Cual es tu lenguaje de programacion favorito?&nbsp;</div>
+    <div class="row">
+        <div class="col-12">
+            <input type="radio" name="myLanguage" id="csharp" value="C#" />
+            <label for="csharp">C#</label>
+            <br /><span id="csharpBlock"></span><br />
+            <input type="radio" name="myLanguage" id="javascript" value="JavaScript" />
+            <label for="javascript">JavaScript</label>
+            <br /><span id="javascriptBlock"></span><br />
+            <input type="radio" name="myLanguage" id="pseint" value="PSeInt" />
+            <label for="pseint">PSeInt</label>
+            <br /><span id="pseintBlock"></span><br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="button" id="sendButton" value="Votar ahora" />
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/poll.js"></script>
+
